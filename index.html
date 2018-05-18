@@ -1,96 +1,303 @@
 <!DOCTYPE html>
 <html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title>时钟</title>
-    <style>
-        *{
-            margin: 0;
-            padding: 0;
-        }
-        ul{
-            list-style: none;
-        }
-        #container{
-            width: 200px;
-            height: 200px;
-            border: 1px solid black;
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            margin-top: -100px;
-            margin-left: -100px;
-            border-radius: 50%;
-        }
-        #clock li{
-            width: 2px;
-            height: 5px;
-            background: black;
-            position: absolute;
-            left: 100px;
-            top: 0;
-            -webkit-transform-origin:0 100px ;
-        }
-        #clock li:nth-child(5n+1){
-            height: 10px;
-        }
-        #hour{
-            width: 6px;
-            height: 35px;
-            background: black;
-            position: absolute;
-            top: 65px;
-            left: 97px;
-            -webkit-transform-origin:bottom;
-        }
-        #minute{
-            width: 4px;
-            height: 45px;
-            position: absolute;
-            top: 55px;
-            left: 98px;
-            background: red;
-            -webkit-transform-origin:bottom;
-        }
-        #second{
-            width: 2px;
-            height: 55px;
-            position: absolute;
-            top: 45px;
-            left: 99px;
-            background: #aaaaaa;
-            -webkit-transform-origin:bottom;
-        }
-    </style>
+<head>
+<title>Home</title>
+<!--mobile apps-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!--mobile apps-->
+<!--Custom Theme files-->
+<link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+<link href="css/style.css" type="text/css" rel="stylesheet" media="all">
+<link rel="stylesheet" href="css/swipebox.css">
+<!--//Custom Theme files-->
+<!--js-->
+<script src="js/jquery-1.11.1.min.js"></script> 
+<!-- //js -->
+<!--web-fonts-->
+<link href='https://fonts.googleapis.com/css?family=Overlock:400,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
+<!--//web-fonts-->
+<!--start-smooth-scrolling-->
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>	
+<script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$(".scroll").click(function(event){		
+				event.preventDefault();
+				$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+			});
+		});
+</script>
+<!--//end-smooth-scrolling-->
 </head>
 <body>
-    <div id="container">
-        <ul id="clock">
-        </ul>
-        <div id="hour"></div>
-        <div id="minute"></div>
-        <div id="second"></div>
-    </div>
-
+	<!--banner-->
+	<div id="home" class="banner">
+		<div class="banner-info">
+			<div class="container">
+				<div class="col-md-4 header-left">
+					<img src="images/img1.jpg" alt=""/>
+				</div>
+				<div class="col-md-8 header-right">
+					<h2>Hello</h2>
+					<h1>I'm CaiHuiXin</h1>
+					<h6>Web Designer and Developer</h6>
+					<ul class="address">
+						<li>
+							<ul class="address-text">
+								<li><b>D.O.B</b></li>
+								<li>1995.12.30</li>
+							</ul>
+						</li>
+						<li>
+							<ul class="address-text">
+								<li><b>PHONE </b></li>
+								<li>18846435143</li>
+							</ul>
+						</li>
+						<li>
+							<ul class="address-text">
+								<li><b>ADDRESS </b></li>
+								<li>哈尔滨，海南</li>
+							</ul>
+						</li>
+						<li>
+							<ul class="address-text">
+								<li><b>E-MAIL </b></li>
+								<li><a href="18846435143@163.com"> 18846435143@163.com</a></li>
+							</ul>
+						</li>
+						<li>
+							<ul class="address-text">
+								<li><b>WEBSITE </b></li>
+								<li><a href="https://github.com/forever-xin">https://github.com/forever-xin</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+	<!--//banner-->
+	<!--top-nav-->
+	<div class="top-nav wow">
+		<div class="container">
+			<div class="navbar-header logo">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					Menu
+				</button>
+			</div>
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<div class="menu">
+					<ul class="nav navbar">
+						<li><a href="#about" class="scroll">About</a></li>
+						<li><a href="#work" class="scroll">Experience</a></li>
+						<li><a href="#education" class="scroll">Education</a></li>
+						<li><a href="#skills" class="scroll">Skills</a></li>
+						
+					</ul>
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+		</div>
+	</div>	
+	<!--//top-nav-->
+	<!--about-->
+	<div id="about" class="about">
+		<div class="container">
+			<h3 class="title">关于自己</h3>
+			<div class="col-md-8 about-left">
+				<p>我是一个热爱编程，喜欢学习的人。</p>
+				<p>希望能在年轻的时候，对得起自己做的决定。</p>
+			</div>
+			<div class="col-md-4 about-right">
+				<ul>
+					<h5>项目</h5>
+					<li><span class="glyphicon glyphicon-menu-right"></span> Vue.js 高仿饿了么外卖 APP”项目</li>
+					<li><span class="glyphicon glyphicon-menu-right"></span> ES6 开发彩票投注”项目</li>
+					<li><span class="glyphicon glyphicon-menu-right"></span> 贪吃蛇项目</li>
+					<li><span class="glyphicon glyphicon-menu-right"></span> 网页京东商城</li>
+					
+				</ul>
+				<div class="clearfix"> </div>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+	<!--//about-->
+	<!--work-experience-->
+	<div id="work" class="work">
+		<div class="container">
+			<h3 class="title">大学经历</h3>
+			<div class="work-info">
+				<div class="col-md-6 work-left">
+					<h4>2014 - 2015 </h4>
+				</div>
+				<div class="col-md-6 work-right">
+					<h5><span class="glyphicon glyphicon-briefcase"> </span> 校广播台技术部干事</h5>
+				<p>
+			     主要进行线路的维护，还有设备的维护
+				</p>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="work-info">
+				<div class="col-md-6 work-right work-right2">
+					<h4>2017.09-2017.11 </h4>
+				</div>
+				<div class="col-md-6 work-left work-left2">
+					<h5><P>用友网络有限公司前端实习生</P>  <span class="glyphicon glyphicon-briefcase"> </span></h5>
+					<p>我所在的部分叫用友云平台事业部门，当时在那主要学习了 knockout 框架在对页面进行编写，还负责当时用友推出的 一个叫云打印产品的测试流程，还有对一些网页的页面设计和运用 php 对后台进行数据库的连接，还有一个叫 APILINK 串口的调试和测试工作，在那重点掌握了 knockout 这个框架体验到了它良好的兼容性，和 4 大比较好的功能，比如声 明式的绑定，UI 界面的自动刷新，依赖和跟踪，和灵活的模版。 </p>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="work-info">
+				<div class="col-md-6 work-left">
+					<h4> 2017.11-2018-02 </h4>
+				</div>
+				<div class="col-md-6 work-right">
+					<h5><span class="glyphicon glyphicon-briefcase"> </span> 无忧英语前端实习生 </h5>
+					<p>主要负责运用 vue 对一些小的移动端功能进行编写，还运用了有关 ES6 的语法进行了对公司网页的一些小地方进行 编写，还有写了有关轮播图的一个界面的编写，还有对网络的维护，和一些页面的测试，同时也掌握了一些团队交 流的方法与工具的使用。
+					</p>
+					
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="work-info">
+				<div class="col-md-6 work-right work-right2">
+					<h4>2018 </h4>
+				</div>
+				<div class="col-md-6 work-left work-left2">
+					<h5> <p>计划</p> <span class="glyphicon glyphicon-briefcase"></span></h5>
+					<p>找到前端工作，对自己的前端知识进行补充，证明自己不是干不了技术的人！ </p>
+					
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+	</div>
+	
+	
+			
+	<!--//work-experience-->
+	<!--education-->
+	<div id="education" class="education">
+		<div class="container">
+			<h3 class="title">学习经历</h3>
+			<div class="work-info"> 
+				<div class="col-md-6 work-left"> 
+					<h4>Primary school2003- 2009</h4>
+				</div>
+				<div class="col-md-6 work-right"> 
+					<h5><span class="glyphicon glyphicon-education"> </span>海南东方第四小学 </h5>
+					<p>小学就读院校</p>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			<div class="work-info"> 
+				<div class="col-md-6 work-right work-right2"> 
+					<h4>Diploma in Design 2014- 2018</h4>
+				</div>
+				<div class="col-md-6 work-left work-left2"> 
+					<h5> <p>黑龙江大学</p> <span class="glyphicon glyphicon-education"></span></h5>
+					<p>本科就读院校 </p>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			<div class="work-info"> 
+				<div class="col-md-6 work-left"> 
+					<h4>Web Design 2011- 2014</h4>
+				</div>
+				<div class="col-md-6 work-right"> 
+					<h5><span class="glyphicon glyphicon-education"> </span> 海口市昌茂中学</h5>
+					<p>高中就读院校</p>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+	<!--//education-->
+	<!--skills-->
+	<div id="skills" class="skills">
+		<div class="container">
+			<h3 class="title">Skills</h3>
+			<div class="skills-info">
+				<div class="col-md-6 bar-grids">
+					<h6>web技术  <span> 60% </span></h6>
+					<div class="progress">
+						<div class="progress-bar progress-bar-striped active" style="width: 60%">
+						</div>
+					</div>
+					<h6>ps技术<span> 40% </span></h6>
+					<div class="progress">
+						<div class="progress-bar progress-bar-striped active" style="width: 40%">
+						</div>
+					</div>
+					<h6>pytihon技术<span>30% </span></h6>
+					<div class="progress">
+						<div class="progress-bar progress-bar-striped active" style="width: 30%">
+						</div>
+					</div>
+					<h6>photoshop技术<span> 55% </span></h6>
+					<div class="progress">
+						<div class="progress-bar progress-bar-striped active" style="width: 55%">
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 bar-grids">
+					<h6>安卓技术 <span> 45% </span></h6>
+					<div class="progress">
+						<div class="progress-bar progress-bar-striped active" style="width: 45%">
+						</div>
+					</div>
+					<h6>ps技术<span> 60% </span></h6>
+					<div class="progress">
+						<div class="progress-bar progress-bar-striped active" style="width: 60%">
+						</div>
+					</div>
+					<h6>java技术<span>50% </span></h6>
+					<div class="progress">
+						<div class="progress-bar progress-bar-striped active" style="width: 50%">
+						</div>
+					</div>
+					<h6>PHP技术<span> 50% </span></h6>
+					<div class="progress">
+						<div class="progress-bar progress-bar-striped active" style="width: 50%">
+						</div>
+					</div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+	<!--//education-->
+	<!--portfolio-->
+	
+	<!--//footer-->
+	<!--smooth-scrolling-of-move-up-->
+	<script type="text/javascript">
+		$(document).ready(function() {
+		
+			var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+			};
+			
+			$().UItoTop({ easingType: 'easeOutQuart' });
+			
+		});
+	</script>
+	<!--//smooth-scrolling-of-move-up-->
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/bootstrap.js"></script>
 </body>
-<script>
-    var oClock = document.getElementById('clock');
-    var oHour = document.getElementById('hour');
-    var oMinute = document.getElementById('minute');
-    var oSecond = document.getElementById('second');
-    var html = '';
-    for(var i=0;i<60;i++){
-       html += "<li style='-webkit-transform:rotate("+i*6+"deg) '></li>";
-    }
-    oClock.innerHTML = html;
-    function run(){
-        var now = new Date();
-        var second = now.getSeconds(), minute = now.getMinutes()+second/60,hour =  now.getHours()+minute/60;
-        oHour.style.WebkitTransform = 'rotate('+ hour * 30 + 'deg)';
-        oMinute.style.webkitTransform = 'rotate('+ minute * 6+'deg)';
-        oSecond.style.webkitTransform = 'rotate('+ second * 6+'deg)';
-    }
-    run();
-    setInterval(run,1000);
-</script>
 </html>
